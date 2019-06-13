@@ -1,3 +1,42 @@
-<p>
-  login works!
-</p>
+    
+<div class="error-pagewrap" style="background: url('assets/img/bg1.svg'); background-repeat : no-repeat;background-size: cover">
+
+    
+
+  <div class="error-page-int">
+    <div class="content-error">
+        <h1 class="font1">Welcome to Admin </h1>
+
+      <div class="hpanel" >
+                  <div class="panel-body" >
+                     <!-- <div class="text-center m-b-md custom-login">
+                          <h1><span style="color: gray">Welcome to</span> <span style="color:	#DD4F39">XYZ</span> </h1>
+                        </div>-->
+                        
+                        <div style="text-align: center;">
+                        <h2 class="font">Login</h2>
+                        <hr style="border-color:rgb(14, 69, 185)">
+                      </div>
+                      <form id="loginForm" class="newForm" #newForm="ngForm"  (ngSubmit)= "onSubmit()">
+                                                  <!-- <div class="checkbox login-checkbox">
+                              <label>
+                        <input type="checkbox" class="regular-checkbox"> Remember me </label>
+                              <p class="help-block small">(if this is a private computer)</p> 
+                          </div>-->
+                          <br>
+                          <div style="text-align: center">
+                          <button type="submit" style="background-color:rgb(10, 58, 160);" class="btn btn-success btn-block loginbtn">Login</button>
+                        </div>
+                          <hr>
+                          <div style="text-align: center;height: 20px">
+                            <h5 style="margin: 10px">{{msg}}</h5>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+    </div>
+    <div class="text-center login-footer">
+      <p>Copyright © 2018. All rights reserved.<a href=""></a></p>
+    </div>
+  </div>   
+  </div>

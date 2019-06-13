@@ -17,6 +17,8 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
+import { AuthGuard } from './auth.guard';
+import { AuthService } from './auth.service';
 
 
 
@@ -45,7 +47,7 @@ import { LoginComponent } from './login/login.component';
 
     
   ],
-  providers: [],
+  providers: [AuthGuard,AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
