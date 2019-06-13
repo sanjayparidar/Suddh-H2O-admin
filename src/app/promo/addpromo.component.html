@@ -1,0 +1,60 @@
+
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title">Add Promo</h4>
+                        <!-- <p class="card-category">Complete your profile</p> -->
+                    </div>
+                    <div class="card-body">
+                        <form #newForm="ngForm" (ngSubmit)= "onSubmit()">
+                            <div class="row">
+                                <!-- <div class="col-md-5">
+                                  <mat-form-field class="example-full-width">
+                                      <input matInput placeholder="Company (disabled)" disabled>
+                                    </mat-form-field>
+                                </div> -->
+                                <div class="col-md-6">
+                                    <mat-form-field class="example-full-width">
+                                      <input matInput placeholder="Promo Name" required #promoname="ngModel" name="promoname" [(ngModel)]="userModel.promoname">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-6">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Promo Code" required #promocode="ngModel" name="promocode" [(ngModel)]="userModel.promocode">
+                                  </mat-form-field>
+                              </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Start Date" type="date" required #startdate="ngModel" name="startdate" [(ngModel)]="userModel.startdate">
+                                  </mat-form-field>
+                                </div>
+                                <div class="col-md-6">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="End Date" type="date" required #enddate="ngModel" name="enddate" [(ngModel)]="userModel.enddate">
+                                  </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                              <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Discount" type="number" required #discount="ngModel" name="discount" [(ngModel)]="userModel.discount">
+                              </mat-form-field>
+                            
+                              <button mat-raised-button type="submit" class="btn btn-danger pull-right" [disabled]="newForm.form.invalid">Update Profile</button>
+                            </div>
+                              <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+          
+        </div>
+    </div>
+  </div>
+  

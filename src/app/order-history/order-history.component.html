@@ -1,0 +1,97 @@
+   <!-- modal -->
+   <div>
+          
+
+    
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="width:60%;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Order Detail</h5>
+            <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button> -->
+          </div>
+          <div class="modal-body">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead class=" text-primary">
+                        <th> # </th>
+                        <th> Category</th>
+                        <th> Price </th>
+                        <th> Quentity </th>
+                        <th> Payment status</th>
+                       
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let table of detailtable, let i = index;">
+                            <td> {{i+1}} </td>
+                            <td> {{table.category}} Litter </td>
+                            <td> {{table.price | currency:'INR':true}} </td>
+                            <td>{{table.Quentity}}</td>
+                            <td> {{table.paymentid}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-info" data-dismiss="modal">ok</button>
+            <!-- <button type="button" class="btn btn-primary">Delete</button> -->
+          
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+   <!-- modal -->
+
+
+
+
+
+
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="card-header card-header-danger">
+                      <h4 class="card-title ">Order History Section</h4>
+                  </div>
+                  <div class="card-body">
+                      <div class="table-responsive">
+                          <table class="table">
+                              <thead class=" text-primary">
+                                  <th> # </th>
+                                  <th> Order Id </th>
+                                  <th> Name </th>
+                                  <th> Amount </th>
+                                  <th> Product </th>
+                                  <th> Date </th>
+                                  <th> Action </th>
+                              </thead>
+                              <tbody>
+                                  <tr *ngFor="let table of table, let i = index;">
+                                      <td> {{i+1}} </td>
+                                      <td> {{table.orderid}} </td>
+                                      <td> {{table}}</td>
+                                      <td> {{table.discounttotal | currency:'INR':true}}</td>
+                                      <td>H2O</td>
+                                      <td> {{table.date}}</td>
+                                      <td> 
+                                      		<button class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" (click)="orderdeatil(table._id)"> <i class="material-icons">clear</i> Detail </button>
+                                      </td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
