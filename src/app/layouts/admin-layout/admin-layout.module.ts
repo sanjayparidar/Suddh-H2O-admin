@@ -27,6 +27,7 @@ import {
 
 
 import { PromoComponent, updatepromoComponent, AddpromoComponent } from 'app/promo/promo.component';
+import { NotificationsComponent } from 'app/notifications/notifications.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -56,7 +57,8 @@ import { PromoComponent, updatepromoComponent, AddpromoComponent } from 'app/pro
     AddpromoComponent,
     PromoComponent,
     updateproductComponent,
-    updatepromoComponent
+    updatepromoComponent,
+    NotificationsComponent
   ]
 })
 
