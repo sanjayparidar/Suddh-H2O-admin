@@ -12,8 +12,8 @@
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && ng serve -o"
   },
   "engines": {
-    "node": "10.15.1",
-    "npm": "6.9.0"
+    "node": "10.3.0",
+    "npm": "6.4.0"
   },
   "private": true,
   "dependencies": {
@@ -62,7 +62,7 @@
     "@types/googlemaps": "3.30.8",
     "@types/jasmine": "2.5.38",
     "@types/jquery": "1.10.31",
-    "@types/node": "10.15.1",
+    "@types/node": "10.3.0",
     "codelyzer": "4.2.1",
     "jasmine-core": "3.3.0",
     "jasmine-spec-reporter": "4.2.1",
