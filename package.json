@@ -17,7 +17,6 @@
   },
   "private": true,
   "dependencies": {
-    
     "@angular-devkit/build-angular": "~0.6.3",
     "@angular/cli": "7.0.2",
     "@angular/compiler-cli": "7.0.2",
