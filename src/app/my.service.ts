@@ -58,4 +58,7 @@ export class MyService {
     return this.http.post('https://sheltered-woodland-33544.herokuapp.com/orderhistory',obj)
 
   }
+  login(data){
+    return this.http.post('https://sheltered-woodland-33544.herokuapp.com/adminpanel',data)
+  }
 }
