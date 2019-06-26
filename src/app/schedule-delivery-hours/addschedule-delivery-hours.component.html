@@ -1,0 +1,65 @@
+
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title">Add Schedule</h4>
+                        <!-- <p class="card-category">Complete your profile</p> -->
+                    </div>
+                    <div class="card-body">
+                        <form #newForm="ngForm" (ngSubmit)= "onSubmit()">
+                            <div class="row">
+                                <!-- <div class="col-md-5">
+                                  <mat-form-field class="example-full-width">
+                                      <input matInput placeholder="Company (disabled)" disabled>
+                                    </mat-form-field>
+                                </div> -->
+                                <div class="col-md-3"></div>
+                                <div class="col-md-6">
+                                    
+                                    <mat-form-field class="example-full-width">
+                                      <input matInput placeholder="Slot" required #title="ngModel" name="title" [(ngModel)]="userModel.title">
+                                    </mat-form-field>
+                                </div>
+                                
+                            </div>
+                            <div class="row">
+                              <div class="col-md-3"></div>
+                                <div class="col-md-6">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Open" type="time" required #open="ngModel" name="open" [(ngModel)]="userModel.open">
+                                  </mat-form-field>
+                                </div>
+                                
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-3"></div>
+                                <div class="col-md-6">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="close" type="time" required #close="ngModel" name="close" [(ngModel)]="userModel.close">
+                                  </mat-form-field>
+                                </div>
+                                
+                            </div>
+                            <div class="row">
+                             
+                              <div class="col-md-3"></div>
+                              <div class="col-md-6">
+                              <button mat-raised-button type="submit" class="btn btn-danger pull-right" [disabled]="newForm.form.invalid">Update Profile</button>
+                            </div>
+                            </div>
+                              <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+          
+        </div>
+    </div>
+  </div>
+  

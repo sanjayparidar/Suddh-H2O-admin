@@ -61,4 +61,22 @@ export class MyService {
   login(data){
     return this.http.post('https://sheltered-woodland-33544.herokuapp.com/adminpanel',data)
   }
+  schedule_delivery(){
+    const fb=new FormData();
+    var obj={}
+    return this.http.post('https://sheltered-woodland-33544.herokuapp.com/availablTimeSlotes/getalldata',obj)
+  }
+  add_schedule_delivery(data){
+    return this.http.post('https://sheltered-woodland-33544.herokuapp.com/availablTimeSlotes',data)
+  }
+  delete_schedule_delivery(id){
+   const fb=new FormData();
+   fb.append('id',id)
+   
+  }
+  getreward(page){
+    const fb=new FormData();
+    fb.append('page',page)
+    return this.http.post('https://sheltered-woodland-33544.herokuapp.com/reward',fb)
+  }
 }

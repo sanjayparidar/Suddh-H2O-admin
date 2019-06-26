@@ -1,3 +1,38 @@
+<div>
+          
+          
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Delete Schedule delivery</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h1>Are you sure ? </h1>
+                
+                <p>Do you really want to delete these <b>{{obj.title}}</b> Schedule? This process cannot be undone.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <!-- <button type="button" class="btn btn-primary">Delete</button> -->
+                 <button type="button" style="color: whitesmoke;" class="btn btn-danger" data-dismiss="modal" (click)="delete(obj._id)" >Delete</button>
+              </div>
+            </div>
+          </div>
+        </div>
+       </div>
+       <!-- modal -->
+    
+    
+
+
+
+
+
 <div class="main-content">
   <div class="container-fluid">
       <div class="row">
@@ -5,7 +40,7 @@
               <div class="card">
                   <div class="card-header card-header-danger">
                       <h4 class="card-title ">Schedule Delivery Hours Section</h4>
-                      <button class="btn btn-info" style="float: right;margin-top: -36px;"> <i class="material-icons">add</i> Add Delivery Hours </button>
+                      <button class="btn btn-info" style="float: right;margin-top: -36px;" routerLink="/addschedule-delivery-hours"> <i class="material-icons">add</i> Add Delivery Hours </button>
                   </div>
                   <div class="card-body">
                       <div class="table-responsive">
@@ -18,13 +53,13 @@
                                   <th> Action </th>
                               </thead>
                               <tbody>
-                                  <tr>
-                                      <td> 1 </td>
-                                      <td> Akash </td>
-                                      <td> 09:00 </td>
-                                      <td> 11:00 </td>
+                                  <tr  *ngFor="let table of table, let i = index;">
+                                      <td> {{i+1}}</td>
+                                      <td> {{table.title}} </td>
+                                      <td> {{table.open}}</td>
+                                      <td> {{table.close}}</td>
                                       <td> 
-                                      		<button class="btn btn-danger"> <i class="material-icons">clear</i> Delete </button>
+                                      		<button class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" (click)="deleteconfirmation(table)"> <i class="material-icons">clear</i> Delete </button>
                                       </td>
                                   </tr>
                               </tbody>

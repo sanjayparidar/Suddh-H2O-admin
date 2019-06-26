@@ -8,7 +8,7 @@ import { UserProfileComponent } from '../../user-profile/user-profile.component'
 import { ProductComponent, updateproductComponent, addproductComponent } from '../../product/product.component';
 import { UserComponent } from '../../user/user.component';
 import { OrderHistoryComponent } from '../../order-history/order-history.component';
-import { ScheduleDeliveryHoursComponent } from '../../schedule-delivery-hours/schedule-delivery-hours.component';
+import { ScheduleDeliveryHoursComponent, AddscheduleDeliveryHoursComponent } from '../../schedule-delivery-hours/schedule-delivery-hours.component';
 import { SubscriptionListComponent } from '../../subscription-list/subscription-list.component';
 import { WalletManageComponent } from '../../wallet-manage/wallet-manage.component';
 import { RewardSystemComponent } from '../../reward-system/reward-system.component';
@@ -58,7 +58,8 @@ import { NotificationsComponent } from 'app/notifications/notifications.componen
     PromoComponent,
     updateproductComponent,
     updatepromoComponent,
-    NotificationsComponent
+    NotificationsComponent,
+    AddscheduleDeliveryHoursComponent
   ]
 })
 

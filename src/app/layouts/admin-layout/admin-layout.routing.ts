@@ -6,7 +6,7 @@ import { ProductComponent, updateproductComponent, addproductComponent } from '.
 import { UserComponent } from '../../user/user.component';
 
 import { OrderHistoryComponent } from '../../order-history/order-history.component';
-import { ScheduleDeliveryHoursComponent } from '../../schedule-delivery-hours/schedule-delivery-hours.component';
+import { ScheduleDeliveryHoursComponent, AddscheduleDeliveryHoursComponent } from '../../schedule-delivery-hours/schedule-delivery-hours.component';
 import { SubscriptionListComponent } from '../../subscription-list/subscription-list.component';
 import { WalletManageComponent } from '../../wallet-manage/wallet-manage.component';
 import { RewardSystemComponent } from '../../reward-system/reward-system.component';
@@ -34,5 +34,6 @@ export const AdminLayoutRoutes: Routes = [
     {path: "promo", component:PromoComponent},
     {path:"addpromo",component:AddpromoComponent},
     {path:'updateproduct/:id',component:updateproductComponent},
-    {path:'updatepromo/:id',component:updatepromoComponent}
+    {path:'updatepromo/:id',component:updatepromoComponent},
+    {path:'addschedule-delivery-hours', component:AddscheduleDeliveryHoursComponent}
 ];

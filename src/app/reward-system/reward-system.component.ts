@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MyService } from 'app/my.service';
 
 @Component({
   selector: 'app-reward-system',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./reward-system.component.scss']
 })
 export class RewardSystemComponent implements OnInit {
-
-  constructor() { }
+table:any=[]
+data:any;
+  constructor(private service:MyService) { }
 
   ngOnInit() {
+    this.service.getreward(1)
+    .subscribe(res=>{
+      this.data=res;
+      if(this.data.status==200){
+        this.table=this.data.result
+      }
+      
+    })
   }
 
 }
